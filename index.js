@@ -1,5 +1,4 @@
 var
-	util 		= require('util'),
 	es 			= require('event-stream'),
 	Lintspaces 	= require('lintspaces')
 ;
@@ -13,12 +12,7 @@ module.exports = function(options) {
 		}
 
 		lintspaces.validate(file.path);
-
-		var invalidLines = lintspaces.getInvalidLines(file.path);
-
-		for (var linenumber in invalidLines) {
-			this.emit('error', util.format('Error in line %d: %s', linenumber, invalidLines[linenumber]));
-		}
+		file.lintspaces = lintspaces.getInvalidLines(file.path);
 
 		return this.emit('data', file);
 	});
