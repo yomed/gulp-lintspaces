@@ -9,7 +9,3 @@ gulp.task("YOURTASK", function() {
         .pipe(lintspaces(/* options */));
 });
 ```
-
-## Options
-
-See [lintspaces](https://github.com/schorfES/node-lintspaces)

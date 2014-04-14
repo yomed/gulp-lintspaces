@@ -26,10 +26,6 @@ gulp.task("YOURTASK", function() {
 
 ## Options
 
-See [lintspaces](https://github.com/schorfES/node-lintspaces)
-
-## Options
-
 ### newline at end of file option
 
 Tests for newlines at the end of all files. Default value is `false`.
