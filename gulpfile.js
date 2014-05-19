@@ -1,7 +1,7 @@
 var
 	util = require('util'),
 	gulp = require('gulp'),
-	colors = require('gulp/node_modules/gulp-util').colors,
+	colors = require('gulp-util').colors,
 	concat = require('gulp-concat'),
 	clean = require('gulp-clean'),
 	jshint = require('gulp-jshint'),
