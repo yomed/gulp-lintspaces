@@ -7,6 +7,7 @@ If you're looking for a [gruntjs](http://gruntjs.com/) task to validate your
 files, take a look at this one:
 
 * [grunt-lintspaces](https://github.com/schorfES/grunt-lintspaces)
+
 ## Installation
 
 This package is available on [npm](https://www.npmjs.org/package/gulp-lintspaces)
