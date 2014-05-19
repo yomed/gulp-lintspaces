@@ -3,6 +3,10 @@ gulp-lintspaces
 
 A thin wrapper of [lintspaces](https://github.com/schorfES/node-lintspaces)
 
+If you're looking for a [gruntjs](http://gruntjs.com/) task to validate your
+files, take a look at this one:
+
+* [grunt-lintspaces](https://github.com/schorfES/grunt-lintspaces)
 ## Installation
 
 This package is available on [npm](https://www.npmjs.org/package/gulp-lintspaces)
@@ -15,7 +19,7 @@ as: `gulp-lintspaces`
 ## Usage
 
 ```javascript
-var gulp = required("gulp");
+var gulp = require("gulp");
 var lintspaces = require("gulp-lintspaces");
 
 gulp.task("YOURTASK", function() {
