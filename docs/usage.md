@@ -1,7 +1,7 @@
 ## Usage
 
 ```javascript
-var gulp = required("gulp");
+var gulp = require("gulp");
 var lintspaces = require("gulp-lintspaces");
 
 gulp.task("YOURTASK", function() {
