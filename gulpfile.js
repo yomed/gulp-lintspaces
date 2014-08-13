@@ -6,7 +6,7 @@ var
 	clean = require('gulp-clean'),
 	jshint = require('gulp-jshint'),
 	jscs = require('gulp-jscs'),
-	map = require('gulp-jshint/node_modules/map-stream'),
+	map = require('map-stream'),
 	jshintErrors = []
 ;
 
