@@ -25,8 +25,8 @@ module.exports.reporter = function() {
 			return this.emit('data', file);
 		}
 
-		if(file.lintspaces && Object.keys(file.lintspaces).length) {
-			for(var line in file.lintspaces) {
+		if (file.lintspaces && Object.keys(file.lintspaces).length) {
+			for (var line in file.lintspaces) {
 				file.lintspaces[line].forEach(function(error) {
 					console.error(
 						'[%s] %s in (%s:%d)\n',

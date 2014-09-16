@@ -21,7 +21,7 @@ describe('comments', function() {
 			invalid.should.not.be.empty;
 			invalid.should.have.property(p);
 			invalid[p].should.not.be.empty;
-			Object.keys(invalid[p]).should.be.eql(['32','46','54']);
+			Object.keys(invalid[p]).should.be.eql(['32', '46', '54']);
 		});
 	});
 
