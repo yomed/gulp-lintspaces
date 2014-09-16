@@ -37,6 +37,7 @@
     "gulp-jshint": "^1.5.3",
     "gulp": "^3.6.0",
     "gulp-clean": "^0.2.4",
-    "gulp-concat": "^2.2.0"
+    "gulp-concat": "^2.2.0",
+    "map-stream": "^0.1.0"
   }
 }
