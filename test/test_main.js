@@ -26,14 +26,14 @@ describe('main', function() {
 		;
 
 		stream.on('end', function() {
-			if(!doneCalled) {
+			if (!doneCalled) {
 				doneCalled = true;
 				done();
 			}
 		});
 
 		stream.on('error', function(error) {
-			if(!doneCalled) {
+			if (!doneCalled) {
 				doneCalled = true;
 				done(error);
 			}
