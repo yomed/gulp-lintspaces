@@ -1,6 +1,7 @@
 var
-	es 			= require('event-stream'),
-	Lintspaces 	= require('lintspaces'),
+	es          = require('event-stream'),
+	Lintspaces  = require('lintspaces'),
+	PluginError = require('gulp-util').PluginError,
 	colors      = require('gulp-util').colors
 ;
 
@@ -14,6 +15,9 @@ module.exports = function(options) {
 
 		lintspaces.validate(file.path);
 		file.lintspaces = lintspaces.getInvalidLines(file.path);
+
+		// HACK: Clean-up the cache for re-validation
+		delete lintspaces._invalid[file.path];
 
 		return this.emit('data', file);
 	});
@@ -37,6 +41,10 @@ module.exports.reporter = function() {
 					);
 				});
 			}
+		}
+
+		if (Object.keys(file.lintspaces).length) {
+			this.emit('error', new PluginError("lint-spaces", "Failed linting spaces"));
 		}
 
 		return this.emit('data', file);
