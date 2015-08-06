@@ -33,9 +33,9 @@ module.exports.reporter = function() {
 			for (var line in file.lintspaces) {
 				file.lintspaces[line].forEach(function(error) {
 					console.error(
-						'[%s] %s in (%s:%d)\n',
+						'[%s] %s in (%s:%d)',
 						colors.green('gulp-lintspaces'),
-						colors.red(error),
+						colors.red(error.message),
 						file.path,
 						line
 					);
@@ -43,9 +43,9 @@ module.exports.reporter = function() {
 			}
 		}
 
-		if (Object.keys(file.lintspaces).length) {
-			this.emit('error', new PluginError("lint-spaces", "Failed linting spaces"));
-		}
+		//if (Object.keys(file.lintspaces).length) {
+		//	this.emit('error', new PluginError("lint-spaces", "Failed linting spaces"));
+		//}
 
 		return this.emit('data', file);
 	});
